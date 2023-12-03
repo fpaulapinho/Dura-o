@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int horaInicio = scanner.nextInt();
+
+        int horaFim = scanner.nextInt();
+
+        int duracao;
+
+        if (horaInicio < horaFim) {
+            duracao = horaFim - horaInicio;
+        } else {
+            duracao = 24 - horaInicio + horaFim;
+        }
+
+        System.out.println("O JOGO DUROU " + duracao + " HORA(S)");
+
+        scanner.close();
+    }
+
+}
